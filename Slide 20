@@ -1,0 +1,27 @@
+ Write a program to remove the duplicate elements in an array and print
+The number of Arguments is limited to maximum of 10.
+Eg) Array Elements--12,34,12,45,67,89
+O/P: 12,34,45,67,89
+
+class Temp{
+    public static void main(String[] args) {
+        int []arr=new int[]{1,22,3,4,5,7,4,3};
+        int ui=0;
+        for(int i=0;i<10;i++){
+            int flag=0;
+            for(int j=0;j<ui;j++){
+                if(arr[j]==arr[i]){
+                    flag=1;
+                    break;
+                }
+            }
+            if(flag==0){
+                arr[ui]=arr[i];
+                ui+=1;
+            }
+        for(int i=0;i<ui;i++){
+            System.out.print(arr[i]);
+        }
+        }
+    }
+}
